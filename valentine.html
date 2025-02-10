@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffcccb;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #d63447;
+      font-size: 3em;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #response {
+      margin-top: 30px;
+      font-size: 2em;
+      color: #d63447;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will You Be My Valentine?</h1>
+  <div class="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+  <div id="response"></div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const response = document.getElementById('response');
+
+    yesBtn.addEventListener('click', () => {
+      response.textContent = 'Yayyyy! 💖';
+    });
+
+    noBtn.addEventListener('click', () => {
+      response.textContent = 'Wrong answer, try again! 😜';
+    });
+  </script>
+</body>
+</html>
